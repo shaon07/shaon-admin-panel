@@ -170,7 +170,7 @@ export default function SidebarViewLayer({
               <li>
                 <Link
                   href="/calendar"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                  className={`${styles.sidebarMenuItem} ${
                     pathname.includes("calendar") &&
                     "bg-graydark dark:bg-meta-4"
                   }`}
@@ -197,7 +197,7 @@ export default function SidebarViewLayer({
               <li>
                 <Link
                   href="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                  className={`${styles.sidebarMenuItem} ${
                     pathname.includes("profile") && "bg-graydark dark:bg-meta-4"
                   }`}
                 >
@@ -234,7 +234,7 @@ export default function SidebarViewLayer({
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                        className={`${styles.sidebarMenuItem} ${
                           (pathname === "/forms" ||
                             pathname.includes("forms")) &&
                           "bg-graydark dark:bg-meta-4"
@@ -336,7 +336,7 @@ export default function SidebarViewLayer({
               <li>
                 <Link
                   href="/tables"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                  className={`${styles.sidebarMenuItem} ${
                     pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
                   }`}
                 >
@@ -374,7 +374,7 @@ export default function SidebarViewLayer({
               <li>
                 <Link
                   href="/settings"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                  className={`${styles.sidebarMenuItem} ${
                     pathname.includes("settings") &&
                     "bg-graydark dark:bg-meta-4"
                   }`}
@@ -417,16 +417,14 @@ export default function SidebarViewLayer({
 
           {/* <!-- Others Group --> */}
           <div>
-            <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
-              OTHERS
-            </h3>
+            <h3 className={`${styles.sidebarMenuWrapper}`}>OTHERS</h3>
 
-            <ul className="mb-6 flex flex-col gap-1.5">
+            <ul className={`${styles.sidebarMenuItemWrapper}`}>
               {/* <!-- Menu Item Chart --> */}
               <li>
                 <Link
                   href="/chart"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                  className={`${styles.sidebarMenuItem} ${
                     pathname.includes("chart") && "bg-graydark dark:bg-meta-4"
                   }`}
                 >
@@ -473,7 +471,7 @@ export default function SidebarViewLayer({
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                        className={`${styles.sidebarMenuItem} ${
                           (pathname === "/ui" || pathname.includes("ui")) &&
                           "bg-graydark dark:bg-meta-4"
                         }`}
@@ -583,7 +581,7 @@ export default function SidebarViewLayer({
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                        className={`${styles.sidebarMenuItem} ${
                           (pathname === "/auth" || pathname.includes("auth")) &&
                           "bg-graydark dark:bg-meta-4"
                         }`}
