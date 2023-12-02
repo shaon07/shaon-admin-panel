@@ -1,5 +1,6 @@
 "use client";
 
+import Header from "@/components/ui/Header";
 import Sidebar from "@/components/ui/Sidebar";
 import { Inter } from "next/font/google";
 import { useState } from "react";
@@ -23,9 +24,7 @@ export default function RootLayout({
         {/* <!-- ===== Content Area Start ===== --> */}
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
           {/* <!-- ===== Header Start ===== --> */}
-          <header>
-            <h1>Header section</h1>
-          </header>
+          <Header />
           {/* <!-- ===== Header End ===== --> */}
 
           {/* <!-- ===== Main Content Start ===== --> */}
