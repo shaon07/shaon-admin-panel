@@ -22,6 +22,7 @@ export default function LogoWrapper({
           height={32}
           src={"/images/logo/logo.svg"}
           alt="Logo"
+          priority
         />
       </Link>
 
