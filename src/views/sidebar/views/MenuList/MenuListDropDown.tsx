@@ -52,12 +52,9 @@ export default function MenuListDropDown({
             <div
               className={`${styles.dropDownMenuWrapper} ${!open && "hidden"}`}
             >
-              {childList.map((child, index) => {
-                return (
-                  <ul
-                    key={index}
-                    className={`${styles.dropDownMenuListWrapper}`}
-                  >
+              <ul className={`${styles.dropDownMenuListWrapper}`}>
+                {childList.map((child, index) => {
+                  return (
                     <MenuListItem
                       key={index}
                       href={child.link}
@@ -66,9 +63,9 @@ export default function MenuListDropDown({
                       value={child.value}
                       pathname={pathname}
                     />
-                  </ul>
-                );
-              })}
+                  );
+                })}
+              </ul>
             </div>
             {/* <!-- Dropdown Menu End --> */}
           </React.Fragment>
