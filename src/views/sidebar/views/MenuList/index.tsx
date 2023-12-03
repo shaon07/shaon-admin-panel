@@ -15,6 +15,35 @@ export default function MenuList({
   setSidebarExpanded,
   sidebarExpanded,
 }: MenuListType) {
+  const renderMenuListItem = (
+    isDropAble: boolean,
+    item: any,
+    index: number
+  ) => {
+    return isDropAble ? (
+      <MenuListDropDown
+        key={index}
+        childList={item.children}
+        icon={item.icon}
+        title={item.title}
+        value={item.value}
+        link={item.link}
+        sidebarExpanded={sidebarExpanded}
+        setSidebarExpanded={setSidebarExpanded}
+        pathname={pathname}
+      />
+    ) : (
+      <MenuListItem
+        key={index}
+        href={item.link}
+        icon={item.icon}
+        title={item.title}
+        value={item.value}
+        pathname={pathname}
+      />
+    );
+  };
+
   return (
     <div className={`${styles.sidebarNavListWrapper}`}>
       {/* <!-- Sidebar Menu --> */}
@@ -30,32 +59,11 @@ export default function MenuList({
               <ul className={`${styles.sidebarMenuItemWrapper}`}>
                 {checkArray(item.menuItems) &&
                   item.menuItems.map((item, index) => {
-                    if (checkArray(item.children)) {
-                      return (
-                        <MenuListDropDown
-                          key={index}
-                          childList={item.children}
-                          icon={item.icon}
-                          title={item.title}
-                          value={item.value}
-                          link={item.link}
-                          pathname={pathname}
-                          sidebarExpanded={sidebarExpanded}
-                          setSidebarExpanded={setSidebarExpanded}
-                        />
-                      );
-                    } else {
-                      return (
-                        <MenuListItem
-                          key={index}
-                          href={item.link}
-                          icon={item.icon}
-                          title={item.title}
-                          value={item.value}
-                          pathname={pathname}
-                        />
-                      );
-                    }
+                    return renderMenuListItem(
+                      checkArray(item.children),
+                      item,
+                      index
+                    );
                   })}
               </ul>
             </div>
