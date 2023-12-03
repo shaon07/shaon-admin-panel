@@ -5,6 +5,7 @@ import { styles } from "@/styles/tailwind/sidebarViewLayer/index.css";
 import Link from "next/link";
 import React from "react";
 import { menuList } from "../../data/menuList";
+import MenuListItem from "./MenuListItem";
 
 type MenuListType = {
   sidebarExpanded: boolean;
@@ -74,19 +75,14 @@ export default function MenuList({
                                         key={index}
                                         className={`${styles.dropDownMenuListWrapper}`}
                                       >
-                                        <li>
-                                          <Link
-                                            href={child.link}
-                                            className={`${
-                                              styles.dropMenuListWrapper
-                                            } ${
-                                              pathname === child.link &&
-                                              "text-white"
-                                            } `}
-                                          >
-                                            {child.title}
-                                          </Link>
-                                        </li>
+                                        <MenuListItem
+                                          key={index}
+                                          href={child.link}
+                                          icon={child.icon}
+                                          title={child.title}
+                                          value={child.value}
+                                          pathname={pathname}
+                                        />
                                       </ul>
                                     );
                                   })}
@@ -99,18 +95,14 @@ export default function MenuList({
                       );
                     } else {
                       return (
-                        <li key={index}>
-                          <Link
-                            href={item.link}
-                            className={`${styles.sidebarMenuItem} ${
-                              pathname.includes(item.value) &&
-                              "bg-graydark dark:bg-meta-4"
-                            }`}
-                          >
-                            {item.icon}
-                            {item.title}
-                          </Link>
-                        </li>
+                        <MenuListItem
+                          key={index}
+                          href={item.link}
+                          icon={item.icon}
+                          title={item.title}
+                          value={item.value}
+                          pathname={pathname}
+                        />
                       );
                     }
                   })}
