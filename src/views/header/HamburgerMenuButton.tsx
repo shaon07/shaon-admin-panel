@@ -1,3 +1,4 @@
+import { styles } from '@/styles/tailwind/Header/hamburgerMenu.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,7 +9,7 @@ type HamburgerMenuButtonType = {
 
 export default function HamburgerMenuButton({ setSidebarOpen, sidebarOpen }: HamburgerMenuButtonType) {
   return (
-    <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
+    <div className={`${styles.hamburgerMenuWrapper}`}>
       {/* <!-- Hamburger Toggle BTN --> */}
       <button
         aria-controls="sidebar"
@@ -16,9 +17,9 @@ export default function HamburgerMenuButton({ setSidebarOpen, sidebarOpen }: Ham
           e.stopPropagation();
           setSidebarOpen(!sidebarOpen);
         }}
-        className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+        className={`${styles.hamburgerButton}`}
       >
-        <span className="relative block h-5.5 w-5.5 cursor-pointer">
+        <span className={`${styles.hamburgerButtonContentWrapper}`}>
           <span className="du-block absolute right-0 h-full w-full">
             <span
               className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${!sidebarOpen && "!w-full delay-300"
