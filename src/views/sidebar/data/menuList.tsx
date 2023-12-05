@@ -12,7 +12,7 @@ import {
 
 export const menuList = [
   {
-    groupTitle: "Menu",
+    groupTitle: "MENU",
     menuItems: [
       {
         title: "Dashboard",
@@ -82,7 +82,7 @@ export const menuList = [
     ],
   },
   {
-    groupTitle: "others",
+    groupTitle: "OTHERS",
     menuItems: [
       {
         title: "Chart",
