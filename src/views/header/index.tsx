@@ -1,4 +1,5 @@
 import DarkModeSwitcher from '@/components/shareable/DarkModeSwitcher';
+import NotificationBoard from '@/components/shareable/DropdownNotification';
 import { styles } from '@/styles/tailwind/Header/index.css';
 import HamburgerMenuButton from './HamburgerMenuButton';
 import HeaderSearchBar from './HeaderSearchbar';
@@ -24,7 +25,7 @@ export default function HeaderViewLayer({ setSidebarOpen, sidebarOpen }: HeaderV
                         {/* <!-- Dark Mode Toggler --> */}
 
                         {/* <!-- Notification Menu Area --> */}
-                        {/* <DropdownNotification /> */}
+                        <NotificationBoard />
                         {/* <!-- Notification Menu Area --> */}
 
                         {/* <!-- Chat Notification Area --> */}

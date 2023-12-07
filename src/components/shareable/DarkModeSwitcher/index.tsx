@@ -1,6 +1,6 @@
 
 import useColorMode from '@/hooks/useColorMode';
-import DarkModeSwitcherViewLayer from '@/views/darkModeSwitcher';
+import DarkModeSwitcherViewLayer from '@/views/common/darkModeSwitcher';
 
 export default function DarkModeSwitcher() {
     const [colorMode, setColorMode] = useColorMode();
