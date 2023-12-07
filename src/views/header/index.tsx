@@ -1,3 +1,4 @@
+import DarkModeSwitcher from '@/components/shareable/DarkModeSwitcher';
 import { styles } from '@/styles/tailwind/Header/index.css';
 import HamburgerMenuButton from './HamburgerMenuButton';
 import HeaderSearchBar from './HeaderSearchbar';
@@ -15,25 +16,26 @@ export default function HeaderViewLayer({ setSidebarOpen, sidebarOpen }: HeaderV
 
                 <HeaderSearchBar />
 
-                {/* <div className="flex items-center gap-3 2xsm:gap-7">
-          <ul className="flex items-center gap-2 2xsm:gap-4"> */}
-                {/* <!-- Dark Mode Toggler --> */}
-                {/* <DarkModeSwitcher /> */}
-                {/* <!-- Dark Mode Toggler --> */}
+                <div className="flex items-center gap-3 2xsm:gap-7">
+                    <ul className="flex items-center gap-2 2xsm:gap-4">
+                        {/* <!-- Dark Mode Toggler --> */}
 
-                {/* <!-- Notification Menu Area --> */}
-                {/* <DropdownNotification /> */}
-                {/* <!-- Notification Menu Area --> */}
+                        <DarkModeSwitcher />
+                        {/* <!-- Dark Mode Toggler --> */}
 
-                {/* <!-- Chat Notification Area --> */}
-                {/* <DropdownMessage /> */}
-                {/* <!-- Chat Notification Area --> */}
-                {/* </ul> */}
+                        {/* <!-- Notification Menu Area --> */}
+                        {/* <DropdownNotification /> */}
+                        {/* <!-- Notification Menu Area --> */}
 
-                {/* <!-- User Area --> */}
-                {/* <DropdownUser /> */}
-                {/* <!-- User Area --> */}
-                {/* </div> */}
+                        {/* <!-- Chat Notification Area --> */}
+                        {/* <DropdownMessage /> */}
+                        {/* <!-- Chat Notification Area --> */}
+                    </ul>
+
+                    {/* <!-- User Area --> */}
+                    {/* <DropdownUser /> */}
+                    {/* <!-- User Area --> */}
+                </div>
             </div>
         </header>
     )
