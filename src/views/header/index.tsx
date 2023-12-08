@@ -1,6 +1,7 @@
 import DarkModeSwitcher from '@/components/shareable/DarkModeSwitcher';
 import MessageBoard from '@/components/shareable/DropdownMessage';
 import NotificationBoard from '@/components/shareable/DropdownNotification';
+import ProfileBoard from '@/components/shareable/DropdownUser';
 import { styles } from '@/styles/tailwind/Header/index.css';
 import HamburgerMenuButton from './HamburgerMenuButton';
 import HeaderSearchBar from './HeaderSearchbar';
@@ -35,7 +36,7 @@ export default function HeaderViewLayer({ setSidebarOpen, sidebarOpen }: HeaderV
                     </ul>
 
                     {/* <!-- User Area --> */}
-                    {/* <DropdownUser /> */}
+                    <ProfileBoard />
                     {/* <!-- User Area --> */}
                 </div>
             </div>
