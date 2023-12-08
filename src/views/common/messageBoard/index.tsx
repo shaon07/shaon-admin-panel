@@ -1,9 +1,9 @@
 import { MessageIcon } from '@/custom-icons';
 import { checkArray } from '@/helpers';
 import { styles } from '@/styles/tailwind/messageBoard/index.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import MessageListItem from './messageListItem';
 
 type MessageBoardViewLayerProps = {
     dropdown: React.RefObject<HTMLDivElement>;
@@ -57,29 +57,7 @@ export default function MessageBoardViewLayer({ dropdown, dropdownOpen, handleTo
                     {
                         checkArray(messageList) && messageList.map((_item, index) => {
                             return (
-                                <li key={index}>
-                                    <Link
-                                        className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                                        href="/messages"
-                                    >
-                                        <div className="h-12.5 w-12.5 rounded-full">
-                                            <Image
-                                                width={112}
-                                                height={112}
-                                                src={"/images/user/user-01.png"}
-                                                alt="User"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <h6 className="text-sm font-medium text-black dark:text-white">
-                                                Robert Jhon
-                                            </h6>
-                                            <p className="text-sm">Can you share your offer?</p>
-                                            <p className="text-xs">10min ago</p>
-                                        </div>
-                                    </Link>
-                                </li>
+                                <MessageListItem key={index} />
                             )
                         })
                     }
