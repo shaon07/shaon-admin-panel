@@ -17,7 +17,7 @@ export const menuList = [
       {
         title: "Dashboard",
         value: "dashboard",
-        link: "/",
+        link: "dashboard",
         icon: <DashboardIcon />,
         children: [
           {
@@ -46,20 +46,20 @@ export const menuList = [
       {
         title: "Forms",
         value: "forms",
-        link: "/forms",
+        link: "forms",
         icon: <FormIcon />,
         children: [
           {
             title: "Form Elements",
             value: "form-elements",
-            link: "/forms/form-elements",
+            link: "forms/form-elements",
             icon: "",
             children: [],
           },
           {
             title: "Form Layouts",
             value: "form-layouts",
-            link: "/forms/form-layouts",
+            link: "forms/form-layouts",
             icon: "",
             children: [],
           },
@@ -68,14 +68,14 @@ export const menuList = [
       {
         title: "Tables",
         value: "tables",
-        link: "/tables",
+        link: "tables",
         icon: <TablesIcon />,
         children: [],
       },
       {
         title: "Settings",
         value: "settings",
-        link: "/settings",
+        link: "settings",
         icon: <SettingsIcon />,
         children: [],
       },
@@ -87,27 +87,27 @@ export const menuList = [
       {
         title: "Chart",
         value: "chart",
-        link: "/chart",
+        link: "chart",
         icon: <ChartIcon />,
         children: [],
       },
       {
         title: "UI Elements",
         value: "ui-elements",
-        link: "/ui-elements",
+        link: "ui-elements",
         icon: <UIELementsIcon />,
         children: [
           {
             title: "Alerts",
             value: "alerts",
-            link: "/ui/alerts",
+            link: "ui/alerts",
             icon: "",
             children: [],
           },
           {
             title: "Buttons",
             value: "buttons",
-            link: "/ui/buttons",
+            link: "ui/buttons",
             icon: "",
             children: [],
           },
@@ -116,19 +116,19 @@ export const menuList = [
       {
         title: "Authentication",
         value: "authentication",
-        link: "/authentication",
+        link: "authentication",
         icon: <AuthIcon />,
         children: [
           {
             title: "Sign In",
             value: "signin",
-            link: "/auth/signin",
+            link: "auth/signin",
             icon: "",
           },
           {
             title: "Sign Up",
             value: "signup",
-            link: "/auth/signup",
+            link: "auth/signup",
             icon: "",
           },
         ],

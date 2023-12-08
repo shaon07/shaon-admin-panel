@@ -1,3 +1,4 @@
+
 import { styles } from "@/styles/tailwind/sidebarViewLayer/index.css";
 import MenuList from "./views/MenuList";
 import LogoWrapper from "./views/logoWrapper";
@@ -24,9 +25,8 @@ export default function SidebarViewLayer({
   return (
     <aside
       ref={sidebar}
-      className={`${styles.sidebarWrapper} ${
-        sidebarOpen ? "translate-x-0" : "-translate-x-full"
-      }`}
+      className={`${styles.sidebarWrapper} ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <LogoWrapper {...{ setSidebarOpen, sidebarOpen, trigger }} />
