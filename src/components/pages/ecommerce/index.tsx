@@ -1,8 +1,9 @@
+import StatsContainer from "@/components/ui/pages/ecommerce/statsContainer";
 
 export default function EcommerceViewLayer() {
     return (
-        <div>
-            <h1>this is e-commerce page</h1>
-        </div>
+        <>
+            <StatsContainer />
+        </>
     )
 }
