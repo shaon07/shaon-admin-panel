@@ -6,8 +6,7 @@ interface CardDataStatsProps {
     title: string;
     total: string;
     rate: string;
-    levelUp?: boolean;
-    levelDown?: boolean;
+    levelStatus: boolean;
     children: ReactNode;
 }
 
@@ -15,9 +14,8 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
     title,
     total,
     rate,
-    levelUp,
-    levelDown,
     children,
+    levelStatus
 }) => {
     return (
         <div className={`${styles.cardDataStatsWrapper}`}>
@@ -34,17 +32,12 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
                 </div>
 
                 <span
-                    className={`${styles.cardStatsLevelWrapper} ${levelUp && 'text-meta-3'
-                        } ${levelDown && 'text-meta-5'} `}
+                    className={`${styles.cardStatsLevelWrapper} ${levelStatus ? "text-meta-3" : "text-meta-5"} `}
                 >
                     {rate}
-
-                    {levelUp && (
-                        <LevelUpIcon />
-                    )}
-                    {levelDown && (
-                        <LevelDownIcon />
-                    )}
+                    {
+                        levelStatus ? <LevelUpIcon /> : <LevelDownIcon />
+                    }
                 </span>
             </div>
         </div>
