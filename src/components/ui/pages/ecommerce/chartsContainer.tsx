@@ -1,9 +1,10 @@
+import SalesAndRevenueChart from "@/components/shareable/SalesAndRevenueChart";
 import { styles } from "@/styles/tailwind/chartsContainer/index.css";
 
 export default function ChartsContainer() {
     return (
         <div className={`${styles.chartsContainerWrapper}`}>
-            {/* <ChartOne /> */}
+            <SalesAndRevenueChart />
             {/* <ChartTwo /> */}
             {/* <ChartThree /> */}
             {/* <MapOne /> */}
