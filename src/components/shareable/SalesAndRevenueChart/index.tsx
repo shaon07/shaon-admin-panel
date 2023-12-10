@@ -153,9 +153,9 @@ const SalesAndRevenueChart: React.FC = () => {
     handleReset;
 
     // NextJS Requirement
-    const isWindowAvailable = () => typeof window !== "undefined";
+    // const isWindowAvailable = () => typeof window !== "undefined";
 
-    if (!isWindowAvailable()) return <></>;
+    // if (!isWindowAvailable()) return <></>;
 
     return (
         <SalesAndRevenueViewLayer options={options} series={state} />
