@@ -1,4 +1,4 @@
-import { channelListType } from "@/types";
+import { channelHeadingTye, channelListType } from "@/types";
 
 export const channelListData: channelListType[] = [
   {
@@ -40,5 +40,28 @@ export const channelListData: channelListType[] = [
     revenues: "6,768",
     sales: 390,
     conversion: 4.2,
+  },
+];
+
+export const channelHeading: channelHeadingTye[] = [
+  {
+    title: "Source",
+    id: 1,
+  },
+  {
+    title: "Visitors",
+    id: 2,
+  },
+  {
+    title: "Revenues",
+    id: 3,
+  },
+  {
+    title: "Sales",
+    id: 4,
+  },
+  {
+    title: "Conversion",
+    id: 5,
   },
 ];

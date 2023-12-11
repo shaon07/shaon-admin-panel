@@ -6,3 +6,8 @@ export type channelListType = {
   sales: number;
   conversion: number;
 };
+
+export type channelHeadingTye = {
+  title: string;
+  id: number;
+};
