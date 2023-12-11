@@ -1,9 +1,7 @@
 "use client"
 
+import EcommerceViewLayer from "@/components/pages/ecommerce"
+
 export default function Dashboard() {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  );
+  return <EcommerceViewLayer />
 }
