@@ -1,4 +1,5 @@
 import ChannelListTable from "@/components/shareable/ChannelListTable";
+import ChatList from "@/components/shareable/ChatList";
 import ProfitChart from "@/components/shareable/ProfitChart";
 import SalesAndRevenueChart from "@/components/shareable/SalesAndRevenueChart";
 import VisitorChart from "@/components/shareable/VisitorChart";
@@ -18,7 +19,7 @@ export default function ChartsContainer() {
             <div className={`${styles.chartsContainerInner}`}>
                 <ChannelListTable />
             </div>
-            {/* <ChatCard /> */}
+            <ChatList />
         </div>
     )
 }
