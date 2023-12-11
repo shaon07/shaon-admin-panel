@@ -2,6 +2,10 @@ import ProfitChart from "@/components/shareable/ProfitChart";
 import SalesAndRevenueChart from "@/components/shareable/SalesAndRevenueChart";
 import VisitorChart from "@/components/shareable/VisitorChart";
 import { styles } from "@/styles/tailwind/chartsContainer/index.css";
+import dynamic from "next/dynamic";
+const MapChart = dynamic(() => import("../../../shareable/MapChart"), {
+    ssr: false,
+});
 
 export default function ChartsContainer() {
     return (
@@ -9,7 +13,7 @@ export default function ChartsContainer() {
             <SalesAndRevenueChart />
             <ProfitChart />
             <VisitorChart />
-            {/* <MapOne /> */}
+            <MapChart />
             <div className={`${styles.chartsContainerInner}`}>
                 {/* <TableOne /> */}
             </div>
