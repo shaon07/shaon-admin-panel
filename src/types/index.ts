@@ -11,3 +11,12 @@ export type channelHeadingTye = {
   title: string;
   id: number;
 };
+
+export type chatListType = {
+  avatar: string;
+  name: string;
+  text: string;
+  time: number;
+  textCount: number;
+  dot: number;
+};
