@@ -20,3 +20,9 @@ export type chatListType = {
   textCount: number;
   dot: number;
 };
+
+export type dateListType = {
+  id: number;
+  fullName: string;
+  shortName: string;
+};
