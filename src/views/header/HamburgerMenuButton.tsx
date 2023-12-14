@@ -52,7 +52,7 @@ export default function HamburgerMenuButton({ setSidebarOpen, sidebarOpen }: Ham
         <Image
           width={32}
           height={32}
-          src={"/images/logo/logo-icon.svg"}
+          src={"/images/logo/Logo-new.svg"}
           alt="Logo"
         />
       </Link>

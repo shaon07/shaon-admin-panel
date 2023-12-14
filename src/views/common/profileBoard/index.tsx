@@ -1,4 +1,5 @@
 import { profileMenuItems } from '@/components/shareable/DropdownUser/data';
+import { ADMIN_IMAGE, ADMIN_NAME, ADMIN_PASSION } from '@/constant';
 import { LogoutIcon, ProfileDropDown } from '@/custom-icons';
 import { checkArray } from '@/helpers';
 import { styles } from '@/styles/tailwind/profileBoard/index.css';
@@ -26,17 +27,18 @@ export default function ProfileBoardViewLayer({ dropdown, dropdownOpen, handleTo
             >
                 <span className={`${styles.profileNameWrapper}`}>
                     <span className={`${styles.profileNameTitle}`}>
-                        Thomas Anree
+                        {ADMIN_NAME}
                     </span>
-                    <span className="block text-xs">UX Designer</span>
+                    <span className="block text-xs">{ADMIN_PASSION}</span>
                 </span>
 
                 <span className="h-12 w-12 rounded-full">
                     <Image
                         width={112}
                         height={112}
-                        src={"/images/user/user-01.png"}
+                        src={ADMIN_IMAGE}
                         alt="User"
+                        className='rounded-full'
                     />
                 </span>
 

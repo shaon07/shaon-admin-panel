@@ -16,14 +16,16 @@ export default function LogoWrapper({
 }: LogoWrapperType) {
   return (
     <div className={`${styles.sidebarHeaderWrapper}`}>
-      <Link href="/">
+      <Link href="/" className="flex items-center gap-4">
         <Image
           width={176}
           height={32}
-          src={"/images/logo/logo.svg"}
+          src={"/images/logo/Logo-new.svg"}
           alt="Logo"
           priority
+          className="w-[50px]"
         />
+        <span className="text-white ">TailWind Admin</span>
       </Link>
 
       <button
