@@ -1,10 +1,8 @@
-import Image from "next/image";
 
 import BreadCrumb from "@/components/ui/pages/calender/breadCrumb";
 import CoverPhotoCard from "@/components/ui/pages/profile/coverPhotoCard";
 import ProfileDetail from "@/components/ui/pages/profile/profileDetail";
-import { ADMIN_IMAGE } from "@/constant";
-import { CameraIcon } from "@/custom-icons";
+import ProfilePhoto from "@/components/ui/pages/profile/profilePhoto";
 import { styles } from "@/styles/tailwind/ProfilePageViewLayer/index.css";
 
 
@@ -18,27 +16,7 @@ const ProfilePageViewLayer = () => {
 
                 <div className={`${styles.detailWrapper}`}>
                     <div className={`${styles.detailContent}`}>
-                        <div className={`${styles.profilePic}`}>
-                            <Image
-                                src={ADMIN_IMAGE}
-                                width={160}
-                                height={160}
-                                alt="profile"
-                                className="rounded-full object-cover"
-                            />
-                            <label
-                                htmlFor="profile"
-                                className={`${styles.profileLabel}`}
-                            >
-                                <CameraIcon />
-                                <input
-                                    type="file"
-                                    name="profile"
-                                    id="profile"
-                                    className="sr-only"
-                                />
-                            </label>
-                        </div>
+                        <ProfilePhoto />
                     </div>
 
                     <ProfileDetail />
