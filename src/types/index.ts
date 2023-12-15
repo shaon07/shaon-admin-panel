@@ -26,3 +26,15 @@ export type dateListType = {
   fullName: string;
   shortName: string;
 };
+
+export type profile_dataType = {
+  id: number;
+  title: string;
+  count: string;
+};
+
+export type socialDataType = {
+  title: string;
+  icon: JSX.Element;
+  url: string;
+};
