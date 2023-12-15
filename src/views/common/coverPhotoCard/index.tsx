@@ -1,19 +1,12 @@
 
 import { ADMIN_COVER_IMAGE } from '@/constant';
 import { EditIcon } from '@/custom-icons';
+import useImageUploader from '@/hooks/useImageUploader';
 import { styles } from "@/styles/tailwind/ProfilePageViewLayer/index.css";
 import Image from 'next/image';
-import { ChangeEvent, useState } from 'react';
 
 export default function CoverPhotoCardViewLayer() {
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-    const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (file) {
-            setSelectedImage(URL.createObjectURL(file));
-        }
-    };
+    const { handleImageChange, image: selectedImage } = useImageUploader();
 
     return (
         <div className={`${styles.coverWrapper}`}>
