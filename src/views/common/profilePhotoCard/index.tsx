@@ -1,12 +1,15 @@
 
 import { ADMIN_IMAGE } from '@/constant';
 import { CameraIcon } from '@/custom-icons';
-import useImageUploader from '@/hooks/useImageUploader';
 import { styles } from "@/styles/tailwind/ProfilePageViewLayer/index.css";
 import Image from 'next/image';
 
-export default function ProfilePhotoViewLayer() {
-    const { handleImageChange, image: selectedImage } = useImageUploader();
+type ProfilePhotoViewLayerType = {
+    handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    selectedImage: string | null;
+}
+
+export default function ProfilePhotoViewLayer({ handleImageChange, selectedImage }: ProfilePhotoViewLayerType) {
 
     return (
         <div className={`${styles.profilePic}`}>
