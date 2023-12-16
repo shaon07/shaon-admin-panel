@@ -1,6 +1,7 @@
 
 
 import FormInputBox from "@/components/shareable/forms/FormInputBox";
+import FormTextAreaBox from "@/components/shareable/forms/FormTextArea";
 import BreadCrumb from "@/components/ui/pages/calender/breadCrumb";
 import { styles } from "@/styles/tailwind/FormElementViewLayer/index.css";
 import { Metadata } from "next";
@@ -120,39 +121,11 @@ const FormElementViewLayer = () => {
                             </h3>
                         </div>
                         <div className={`${styles.card}`}>
-                            <div>
-                                <label className="mb-3 block text-black dark:text-white">
-                                    Default textarea
-                                </label>
-                                <textarea
-                                    rows={6}
-                                    placeholder="Default textarea"
-                                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                                ></textarea>
-                            </div>
+                            <FormTextAreaBox label="Default textarea" placeholder="Default textarea" />
 
-                            <div>
-                                <label className="mb-3 block text-black dark:text-white">
-                                    Active textarea
-                                </label>
-                                <textarea
-                                    rows={6}
-                                    placeholder="Active textarea"
-                                    className="w-full rounded-lg border-[1.5px] border-primary bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input"
-                                ></textarea>
-                            </div>
+                            <FormTextAreaBox label="Active textarea" placeholder="Active textarea" variant="active" />
 
-                            <div>
-                                <label className="mb-3 block text-black dark:text-white">
-                                    Disabled textarea
-                                </label>
-                                <textarea
-                                    rows={6}
-                                    disabled
-                                    placeholder="Disabled textarea"
-                                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary dark:disabled:bg-black"
-                                ></textarea>
-                            </div>
+                            <FormTextAreaBox label="Disabled textarea" placeholder="Disabled textarea" variant="disabled" />
                         </div>
                     </div>
 
