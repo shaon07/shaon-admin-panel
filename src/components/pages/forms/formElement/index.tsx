@@ -1,5 +1,6 @@
 
 
+import Switcher from "@/components/shareable/Switcher";
 import FormInputBox from "@/components/shareable/forms/FormInputBox";
 import FormTextAreaBox from "@/components/shareable/forms/FormTextArea";
 import BreadCrumb from "@/components/ui/pages/calender/breadCrumb";
@@ -40,10 +41,10 @@ const FormElementViewLayer = () => {
                             </h3>
                         </div>
                         <div className={`${styles.card}`}>
-                            {/* <SwitcherOne />
-              <SwitcherTwo />
-              <SwitcherThree />
-              <SwitcherFour /> */}
+                            <Switcher />
+                            <Switcher variant="two" />
+                            <Switcher variant="three" />
+                            <Switcher variant="four" />
                         </div>
                     </div>
 
