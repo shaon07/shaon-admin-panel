@@ -1,5 +1,6 @@
 
 
+import FormInputBox from "@/components/shareable/forms/FormInputBox";
 import BreadCrumb from "@/components/ui/pages/calender/breadCrumb";
 import { styles } from "@/styles/tailwind/FormElementViewLayer/index.css";
 import { Metadata } from "next";
@@ -24,39 +25,9 @@ const FormElementViewLayer = () => {
                             </h3>
                         </div>
                         <div className={`${styles.card}`}>
-                            <div>
-                                <label className="mb-3 block text-black dark:text-white">
-                                    Default Input
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Default Input"
-                                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="mb-3 block text-black dark:text-white">
-                                    Active Input
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Active Input"
-                                    className="w-full rounded-lg border-[1.5px] border-primary bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="mb-3 block font-medium text-black dark:text-white">
-                                    Disabled label
-                                </label>
-                                <input
-                                    type="text"
-                                    placeholder="Disabled label"
-                                    disabled
-                                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary dark:disabled:bg-black"
-                                />
-                            </div>
+                            <FormInputBox label="Default Input" placeholder="Default Input" />
+                            <FormInputBox label="Active Input" placeholder="Active Input" variant="active" />
+                            <FormInputBox label="Disabled label" placeholder="Disabled label" variant="disabled" />
                         </div>
                     </div>
 
