@@ -1,6 +1,7 @@
 
 
 import BreadCrumb from "@/components/ui/pages/calender/breadCrumb";
+import { styles } from "@/styles/tailwind/FormElementViewLayer/index.css";
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Form Elements Page | Next.js E-commerce Dashboard Template",
@@ -13,16 +14,16 @@ const FormElementViewLayer = () => {
         <>
             <BreadCrumb title="FormElements" />
 
-            <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
-                <div className="flex flex-col gap-9">
+            <div className={`${styles.contentWrapper}`}>
+                <div className={`${styles.formElementWrapper}`}>
                     {/* <!-- Input Fields --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Input Fields
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             <div>
                                 <label className="mb-3 block text-black dark:text-white">
                                     Default Input
@@ -60,13 +61,13 @@ const FormElementViewLayer = () => {
                     </div>
 
                     {/* <!-- Toggle switch input --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Toggle switch input
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             {/* <SwitcherOne />
               <SwitcherTwo />
               <SwitcherThree />
@@ -75,13 +76,13 @@ const FormElementViewLayer = () => {
                     </div>
 
                     {/* <!-- Time and date --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Time and date
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             <div>
                                 <label className="mb-3 block text-black dark:text-white">
                                     Date picker
@@ -109,13 +110,13 @@ const FormElementViewLayer = () => {
                     </div>
 
                     {/* <!-- File upload --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 File upload
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             <div>
                                 <label className="mb-3 block text-black dark:text-white">
                                     Attach file
@@ -139,15 +140,15 @@ const FormElementViewLayer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-9">
+                <div className={`${styles.formElementWrapper}`}>
                     {/* <!-- Textarea Fields --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Textarea Fields
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             <div>
                                 <label className="mb-3 block text-black dark:text-white">
                                     Default textarea
@@ -185,13 +186,13 @@ const FormElementViewLayer = () => {
                     </div>
 
                     {/* <!-- Checkbox and radio --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Checkbox and radio
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             {/* <CheckboxOne />
               <CheckboxTwo />
               <CheckboxThree />
@@ -201,13 +202,13 @@ const FormElementViewLayer = () => {
                     </div>
 
                     {/* <!-- Select input --> */}
-                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                            <h3 className="font-medium text-black dark:text-white">
+                    <div className={`${styles.formContainer}`}>
+                        <div className={`${styles.formBox}`}>
+                            <h3 className={`${styles.heading}`}>
                                 Select input
                             </h3>
                         </div>
-                        <div className="flex flex-col gap-5.5 p-6.5">
+                        <div className={`${styles.card}`}>
                             <div>
                                 <label className="mb-3 block text-black dark:text-white">
                                     Select Country
