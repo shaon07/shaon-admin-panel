@@ -52,14 +52,14 @@ export const menuList = [
           {
             title: "Form Elements",
             value: "form-elements",
-            link: "forms/form-elements",
+            link: "/forms/form-elements",
             icon: "",
             children: [],
           },
           {
             title: "Form Layouts",
             value: "form-layouts",
-            link: "forms/form-layouts",
+            link: "/forms/form-layouts",
             icon: "",
             children: [],
           },
