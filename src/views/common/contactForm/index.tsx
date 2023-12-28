@@ -1,3 +1,4 @@
+import Button from "@/components/shareable/Button";
 import FormInputBox from "@/components/shareable/forms/FormInputBox";
 import FormTextAreaBox from "@/components/shareable/forms/FormTextArea";
 import { styles } from "@/styles/tailwind/contactForm/index.css";
@@ -70,10 +71,8 @@ export default function ContactForm() {
             <FormTextAreaBox label="Message" placeholder="Type your message" />
           </div>
 
+          <Button text="Send Message" />
 
-          <button className="flex w-full justify-center rounded bg-primary p-3 font-medium text-gray">
-            Send Message
-          </button>
         </div>
       </form>
     </div>
