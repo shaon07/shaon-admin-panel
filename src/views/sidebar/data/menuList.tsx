@@ -68,14 +68,14 @@ export const menuList = [
       {
         title: "Tables",
         value: "tables",
-        link: "tables",
+        link: "/tables",
         icon: <TablesIcon />,
         children: [],
       },
       {
         title: "Settings",
         value: "settings",
-        link: "settings",
+        link: "/settings",
         icon: <SettingsIcon />,
         children: [],
       },
@@ -87,14 +87,14 @@ export const menuList = [
       {
         title: "Chart",
         value: "chart",
-        link: "chart",
+        link: "/chart",
         icon: <ChartIcon />,
         children: [],
       },
       {
         title: "UI Elements",
         value: "ui-elements",
-        link: "ui-elements",
+        link: "/ui-elements",
         icon: <UIELementsIcon />,
         children: [
           {

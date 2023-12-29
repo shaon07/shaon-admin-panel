@@ -1,8 +1,8 @@
 import { checkArray } from '@/helpers'
+import { channelHeading } from '@/resources/channelListData'
 import { styles } from '@/styles/tailwind/ChannelListViewLayer/index.css'
 import { channelListType } from '@/types'
 import Image from 'next/image'
-import { channelHeading } from './data/channelData'
 import TableHeading from './tableHeading'
 
 type ChannelListViewLayerProps = {
