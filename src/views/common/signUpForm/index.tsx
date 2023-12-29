@@ -1,61 +1,36 @@
+import Button from "@/components/shareable/Button";
+import FormInputBox from "@/components/shareable/forms/FormInputBox";
+import { globalStyles } from "@/styles/tailwind/global/index.css";
+import { styles } from "@/styles/tailwind/signUpForm/index.css";
 
 export default function SignUpForm() {
     return (
-        <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark" >
-            <div className="border-b border-stroke py-4 px-6.5 dark:border-strokedark">
-                <h3 className="font-medium text-black dark:text-white">
+        <div className={`${globalStyles.container}`} >
+            <div className={`${globalStyles.border}`}>
+                <h3 className={`${styles.heading}`}>
                     Sign Up Form
                 </h3>
             </div>
+
             <form action="#">
                 <div className="p-6.5">
                     <div className="mb-4.5">
-                        <label className="mb-2.5 block text-black dark:text-white">
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Enter your full name"
-                            className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                        />
+                        <FormInputBox label="Name" placeholder="Enter your username" />
                     </div>
 
                     <div className="mb-4.5">
-                        <label className="mb-2.5 block text-black dark:text-white">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                        />
+                        <FormInputBox label="Email" placeholder="Enter your email address" />
                     </div>
 
                     <div className="mb-4.5">
-                        <label className="mb-2.5 block text-black dark:text-white">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            placeholder="Enter password"
-                            className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                        />
+                        <FormInputBox label="Phone" placeholder="Enter your phone number" type="password" />
                     </div>
 
                     <div className="mb-5.5">
-                        <label className="mb-2.5 block text-black dark:text-white">
-                            Re-type Password
-                        </label>
-                        <input
-                            type="password"
-                            placeholder="Re-enter password"
-                            className="w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                        />
+                        <FormInputBox label="Re-type Password" placeholder="Re-enter password" type="password" />
                     </div>
 
-                    <button className="flex w-full justify-center rounded bg-primary p-3 font-medium text-gray">
-                        Sign Up
-                    </button>
+                    <Button text="Sign Up" type="submit" />
                 </div>
             </form>
         </div>
