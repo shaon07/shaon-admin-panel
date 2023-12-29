@@ -38,3 +38,17 @@ export type socialDataType = {
   icon: JSX.Element;
   url: string;
 };
+
+export type topProductPriceType = {
+  image: string;
+  name: string;
+  category: string;
+  price: number;
+  sold: number;
+  profit: number;
+};
+
+export type topProductHeadingType = {
+  id: number;
+  name: string;
+};

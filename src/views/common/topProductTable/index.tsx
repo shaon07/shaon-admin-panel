@@ -1,70 +1,37 @@
+import { checkArray } from "@/helpers";
+import { topProductData, topProductHeading } from "@/resources/topProductTable";
+import { globalStyles } from "@/styles/tailwind/global/index.css";
+import { styles } from "@/styles/tailwind/topProductTable/index.css";
+import { topProductHeadingType, topProductPriceType } from "@/types";
 import Image from "next/image";
 
-const productData: any = [
-    {
-        image: "/images/product/product-01.png",
-        name: "Apple Watch Series 7",
-        category: "Electronics",
-        price: 296,
-        sold: 22,
-        profit: 45,
-    },
-    {
-        image: "/images/product/product-02.png",
-        name: "Macbook Pro M1",
-        category: "Electronics",
-        price: 546,
-        sold: 12,
-        profit: 125,
-    },
-    {
-        image: "/images/product/product-03.png",
-        name: "Dell Inspiron 15",
-        category: "Electronics",
-        price: 443,
-        sold: 64,
-        profit: 247,
-    },
-    {
-        image: "/images/product/product-04.png",
-        name: "HP Probook 450",
-        category: "Electronics",
-        price: 499,
-        sold: 72,
-        profit: 103,
-    },
-];
+
 
 const TopProductTable = () => {
     return (
-        <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+        <div className={`${globalStyles.container}`}>
             <div className="py-6 px-4 md:px-6 xl:px-7.5">
                 <h4 className="text-xl font-semibold text-black dark:text-white">
                     Top Products
                 </h4>
             </div>
 
-            <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                <div className="col-span-3 flex items-center">
-                    <p className="font-medium">Product Name</p>
-                </div>
-                <div className="col-span-2 hidden items-center sm:flex">
-                    <p className="font-medium">Category</p>
-                </div>
-                <div className="col-span-1 flex items-center">
-                    <p className="font-medium">Price</p>
-                </div>
-                <div className="col-span-1 flex items-center">
-                    <p className="font-medium">Sold</p>
-                </div>
-                <div className="col-span-1 flex items-center">
-                    <p className="font-medium">Profit</p>
-                </div>
+            <div className={`${styles.grid}`}>
+                {
+                    checkArray(topProductHeading) && topProductHeading.map((heading: topProductHeadingType,) => (
+                        <div
+                            className="col-span-1 flex items-center"
+                            key={heading.id}
+                        >
+                            <p className="font-medium">{heading.name}</p>
+                        </div>
+                    ))
+                }
             </div>
 
-            {productData.map((product: any, key: any) => (
+            {checkArray(topProductData) && topProductData.map((product: topProductPriceType, key: any) => (
                 <div
-                    className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5"
+                    className={`${styles.grid}`}
                     key={key}
                 >
                     <div className="col-span-3 flex items-center">
