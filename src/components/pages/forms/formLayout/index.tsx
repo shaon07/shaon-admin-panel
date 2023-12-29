@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/ui/pages/calender/breadCrumb"
 import { styles } from "@/styles/tailwind/FormLayoutViewLayer/index.css"
 import ContactForm from "@/views/common/contactForm"
 import SignInForm from "@/views/common/signInForm"
+import SignUpForm from "@/views/common/signUpForm"
 
 export default function FormLayoutContainers() {
     return (
@@ -14,7 +15,7 @@ export default function FormLayoutContainers() {
 
                 <div className={`${styles.container}`}>
                     <SignInForm />
-                    <SignInForm />
+                    <SignUpForm />
                 </div>
             </div>
         </div>
