@@ -2,51 +2,53 @@ import { DownloadIcon, EyeIcon, TrashIcon } from "@/custom-icons";
 import { checkArray } from "@/helpers";
 import { packageData } from "@/resources/topPackageListTable";
 import { globalStyles } from "@/styles/tailwind/global/index.css";
+import { styles } from "@/styles/tailwind/topPackageTable/index.css";
 
 const TopPackageTable = () => {
     return (
-        <div className={`${globalStyles.border}`}>
+        <div className={`${globalStyles.container} p-4 md:p-8`}>
             <div className="mb-4">
-                <h4 className="text-xl font-semibold text-black dark:text-white">
+                <h4 className={`${styles.heading}`}>
                     Top Packages
                 </h4>
             </div>
 
-            <div className="max-w-full overflow-x-auto">
-                <table className="w-full table-auto">
+            <div className={`${styles.tableContentWrapper}`}>
+                <table className={`${styles.tableWrapper}`}>
                     <thead>
-                        <tr className="bg-gray-2 text-left dark:bg-meta-4">
-                            <th className="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
+                        <tr className={`${styles.tableRow}`}>
+                            <th className={`min-w-[220px] xl:pl-11 ${styles.tableHead}`}>
                                 Package
                             </th>
-                            <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
+                            <th className={`min-w-[150px] ${styles.tableHead}`}>
                                 Invoice date
                             </th>
-                            <th className="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
+                            <th className={`min-w-[120px] ${styles.tableHead}`}>
                                 Status
                             </th>
-                            <th className="py-4 px-4 font-medium text-black dark:text-white">
+                            <th className={`${styles.tableHead}`}>
                                 Actions
                             </th>
                         </tr>
                     </thead>
+
                     <tbody>
                         {checkArray(packageData) && packageData.map((packageItem, key) => (
                             <tr key={key}>
-                                <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
+                                <td className={`${styles.topRow}`}>
                                     <h5 className="font-medium text-black dark:text-white">
                                         {packageItem.name}
                                     </h5>
                                     <p className="text-sm">${packageItem.price}</p>
                                 </td>
-                                <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                <td className={`${styles.tableData}`}>
                                     <p className="text-black dark:text-white">
                                         {packageItem.invoiceDate}
                                     </p>
                                 </td>
-                                <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                <td className={`${styles.tableData}`}>
                                     <p
-                                        className={`inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium ${packageItem.status === "Paid"
+                                        className={`${styles.statusRow} ${packageItem.status === "Paid"
                                             ? "text-success bg-success"
                                             : packageItem.status === "Unpaid"
                                                 ? "text-danger bg-danger"
@@ -56,7 +58,7 @@ const TopPackageTable = () => {
                                         {packageItem.status}
                                     </p>
                                 </td>
-                                <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                <td className={`${styles.tableData}`}>
                                     <div className="flex items-center space-x-3.5">
                                         <button className="hover:text-primary">
                                             <EyeIcon />
