@@ -1,33 +1,7 @@
 import { DownloadIcon, EyeIcon, TrashIcon } from "@/custom-icons";
+import { checkArray } from "@/helpers";
+import { packageData } from "@/resources/topPackageListTable";
 import { globalStyles } from "@/styles/tailwind/global/index.css";
-import { Package } from "@/types/package";
-
-const packageData: Package[] = [
-    {
-        name: "Free package",
-        price: 0.0,
-        invoiceDate: `Jan 13,2023`,
-        status: "Paid",
-    },
-    {
-        name: "Standard Package",
-        price: 59.0,
-        invoiceDate: `Jan 13,2023`,
-        status: "Paid",
-    },
-    {
-        name: "Business Package",
-        price: 99.0,
-        invoiceDate: `Jan 13,2023`,
-        status: "Unpaid",
-    },
-    {
-        name: "Standard Package",
-        price: 59.0,
-        invoiceDate: `Jan 13,2023`,
-        status: "Pending",
-    },
-];
 
 const TopPackageTable = () => {
     return (
@@ -57,7 +31,7 @@ const TopPackageTable = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {packageData.map((packageItem, key) => (
+                        {checkArray(packageData) && packageData.map((packageItem, key) => (
                             <tr key={key}>
                                 <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
                                     <h5 className="font-medium text-black dark:text-white">

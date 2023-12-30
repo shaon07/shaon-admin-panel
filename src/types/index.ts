@@ -52,3 +52,10 @@ export type topProductHeadingType = {
   id: number;
   name: string;
 };
+
+export type topPackageListType = {
+  name: string;
+  price: number;
+  invoiceDate: string;
+  status: string;
+};
