@@ -8,7 +8,10 @@ export default function SettingsViewLayer() {
             <BreadCrumb title="Settings" />
 
             <div className="grid grid-cols-5 gap-8">
-                <PersonalInformation />
+                <div className="col-span-5 xl:col-span-3">
+                    <PersonalInformation />
+                </div>
+
                 <PhotoLoader />
             </div>
         </div>
