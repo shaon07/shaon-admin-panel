@@ -1,11 +1,14 @@
+"use client";
+
 import Button from "@/components/shareable/Button";
+import FileUploader from "@/components/shareable/fileUploader";
 import { ADMIN_IMAGE } from "@/constant";
-import { UploadIcon } from "@/custom-icons";
 import { globalStyles } from "@/styles/tailwind/global/index.css";
-import { styles } from "@/styles/tailwind/photoLoader/index.css";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function PhotoLoader() {
+    const [showPhoto, setShowPhoto] = useState("");
     return (
         <div className={`${globalStyles.container}`}>
             <div className={`${globalStyles.border}`}>
@@ -19,7 +22,7 @@ export default function PhotoLoader() {
                     <div className="mb-4 flex items-center gap-3">
                         <div className="h-14 w-14 rounded-full">
                             <Image
-                                src={ADMIN_IMAGE}
+                                src={showPhoto || ADMIN_IMAGE}
                                 width={55}
                                 height={55}
                                 alt="User"
@@ -41,27 +44,7 @@ export default function PhotoLoader() {
                         </div>
                     </div>
 
-                    <div
-                        id="FileUpload"
-                        className={`${styles.wrapper}`}
-                    >
-                        <input
-                            type="file"
-                            accept="image/*"
-                            className="absolute inset-0 z-50 m-0 h-full w-full cursor-pointer p-0 opacity-0 outline-none"
-                        />
-                        <div className="flex flex-col items-center justify-center space-y-3">
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-stroke bg-white dark:border-strokedark dark:bg-boxdark">
-                                <UploadIcon />
-                            </span>
-                            <p>
-                                <span className="text-primary">Click to upload</span> or
-                                drag and drop
-                            </p>
-                            <p className="mt-1.5">SVG, PNG, JPG or GIF</p>
-                            <p>(max, 800 X 800px)</p>
-                        </div>
-                    </div>
+                    <FileUploader onUpload={setShowPhoto} />
 
                     <div className="flex justify-end gap-4.5">
                         <Button text="Cancel" variants="secondary" className="border border-stroke py-2 px-6 w-full" />
