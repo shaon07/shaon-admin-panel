@@ -1,3 +1,5 @@
+import FormInputBox from "@/components/shareable/forms/FormInputBox";
+import FormTextAreaBox from "@/components/shareable/forms/FormTextArea";
 import { EditIconPen, EnvelopIcon, UserIconBox } from "@/custom-icons";
 import { globalStyles } from "@/styles/tailwind/global/index.css";
 import { styles } from "@/styles/tailwind/personalInformation/index.css";
@@ -14,106 +16,21 @@ export default function PersonalInformation() {
             <div className="p-7">
                 <form action="#">
                     <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                        <div className="w-full sm:w-1/2">
-                            <label
-                                className="mb-3 block text-sm font-medium text-black dark:text-white"
-                                htmlFor="fullName"
-                            >
-                                Full Name
-                            </label>
-                            <div className="relative">
-                                <span className="absolute left-4.5 top-4">
-                                    <UserIconBox />
-                                </span>
-                                <input
-                                    className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                                    type="text"
-                                    name="fullName"
-                                    id="fullName"
-                                    placeholder="Devid Jhon"
-                                    defaultValue="Devid Jhon"
-                                />
-                            </div>
-                        </div>
+                        <FormInputBox label="Full Name" placeholder="Devid Jhon" PrefixIcon={<UserIconBox />} />
 
-                        <div className="w-full sm:w-1/2">
-                            <label
-                                className="mb-3 block text-sm font-medium text-black dark:text-white"
-                                htmlFor="phoneNumber"
-                            >
-                                Phone Number
-                            </label>
-                            <input
-                                className="w-full rounded border border-stroke bg-gray py-3 px-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                                type="text"
-                                name="phoneNumber"
-                                id="phoneNumber"
-                                placeholder="+990 3343 7865"
-                                defaultValue="+990 3343 7865"
-                            />
-                        </div>
+                        <FormInputBox label="Phone Number" type="number" placeholder="Phone Number" />
                     </div>
 
                     <div className="mb-5.5">
-                        <label
-                            className="mb-3 block text-sm font-medium text-black dark:text-white"
-                            htmlFor="emailAddress"
-                        >
-                            Email Address
-                        </label>
-                        <div className="relative">
-                            <span className="absolute left-4.5 top-4">
-                                <EnvelopIcon />
-                            </span>
-                            <input
-                                className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                                type="email"
-                                name="emailAddress"
-                                id="emailAddress"
-                                placeholder="devidjond45@gmail.com"
-                                defaultValue="devidjond45@gmail.com"
-                            />
-                        </div>
+                        <FormInputBox label="Email Address" placeholder="devidjond45@gmail.com" PrefixIcon={<EnvelopIcon />} />
                     </div>
 
                     <div className="mb-5.5">
-                        <label
-                            className="mb-3 block text-sm font-medium text-black dark:text-white"
-                            htmlFor="Username"
-                        >
-                            Username
-                        </label>
-                        <input
-                            className="w-full rounded border border-stroke bg-gray py-3 px-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                            type="text"
-                            name="Username"
-                            id="Username"
-                            placeholder="devidjhon24"
-                            defaultValue="devidjhon24"
-                        />
+                        <FormInputBox label="Username" placeholder="devidjhon24" />
                     </div>
 
                     <div className="mb-5.5">
-                        <label
-                            className="mb-3 block text-sm font-medium text-black dark:text-white"
-                            htmlFor="Username"
-                        >
-                            BIO
-                        </label>
-                        <div className="relative">
-                            <span className="absolute left-4.5 top-4">
-                                <EditIconPen />
-                            </span>
-
-                            <textarea
-                                className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                                name="bio"
-                                id="bio"
-                                rows={6}
-                                placeholder="Write your bio here"
-                                defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere fermentum urna, eu condimentum mauris tempus ut. Donec fermentum blandit aliquet."
-                            ></textarea>
-                        </div>
+                        <FormTextAreaBox label="Bio" placeholder="Write your bio here" PrefixIcon={<EditIconPen />} />
                     </div>
 
                     <div className="flex justify-end gap-4.5">

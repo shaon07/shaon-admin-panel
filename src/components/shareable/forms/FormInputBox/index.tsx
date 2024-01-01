@@ -9,9 +9,10 @@ type FormInputBoxProps = {
     className?: string;
     placeholder?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    PrefixIcon?: React.ReactNode | null;
 }
 
-export default function FormInputBox({ label = "", placeholder = "", variant = "normal", type = "text", className = "", onChange = () => { } }: FormInputBoxProps) {
+export default function FormInputBox({ label = "", placeholder = "", variant = "normal", type = "text", className = "", PrefixIcon = null, onChange = () => { } }: FormInputBoxProps) {
 
     const handleVariant = () => {
         switch (variant) {
@@ -31,13 +32,18 @@ export default function FormInputBox({ label = "", placeholder = "", variant = "
             <label className="mb-3 block text-black dark:text-white">
                 {label || "Default Input"}
             </label>
-            <input
-                type={type || "text"}
-                placeholder={placeholder || "Default Input"}
-                onChange={onChange}
-                disabled={variant === "disabled"}
-                className={`${styles.formInputBox} ${className} ${handleVariant()}`}
-            />
+            <div className="relative">
+                {PrefixIcon && <span className="absolute left-4.5 top-4">
+                    {PrefixIcon}
+                </span>}
+                <input
+                    type={type || "text"}
+                    placeholder={placeholder || "Default Input"}
+                    onChange={onChange}
+                    disabled={variant === "disabled"}
+                    className={`${styles.formInputBox} ${PrefixIcon ? styles.prefixIcon : ""} ${className} ${handleVariant()}`}
+                />
+            </div>
         </div>
     )
 }
