@@ -8,9 +8,10 @@ type FormTextAreaBoxProps = {
   className?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  PrefixIcon?: React.ReactNode | null;
 }
 
-export default function FormTextAreaBox({ label = "", placeholder = "", variant = "normal", className = "", onChange = () => { } }: FormTextAreaBoxProps) {
+export default function FormTextAreaBox({ label = "", placeholder = "", variant = "normal", className = "", PrefixIcon = null, onChange = () => { } }: FormTextAreaBoxProps) {
 
   const handleVariant = () => {
     switch (variant) {
@@ -30,11 +31,16 @@ export default function FormTextAreaBox({ label = "", placeholder = "", variant 
       <label className="mb-3 block text-black dark:text-white">
         {label || "Default Input"}
       </label>
+      <div className="relative">
+        {PrefixIcon && <span className="absolute left-4.5 top-4">
+          {PrefixIcon}
+        </span>}
+      </div>
       <textarea placeholder={placeholder || "Default Input"}
         onChange={onChange}
         disabled={variant === "disabled"}
         rows={6}
-        className={`${styles.formInputBox} ${className} ${handleVariant()}`}></textarea>
+        className={`${styles.formInputBox} ${PrefixIcon ? styles.prefixIcon : ""} ${className} ${handleVariant()}`}></textarea>
     </div>
   )
 }
