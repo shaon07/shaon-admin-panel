@@ -1,3 +1,4 @@
+import Button from "@/components/shareable/Button";
 import FormInputBox from "@/components/shareable/forms/FormInputBox";
 import FormTextAreaBox from "@/components/shareable/forms/FormTextArea";
 import { EditIconPen, EnvelopIcon, UserIconBox } from "@/custom-icons";
@@ -34,18 +35,8 @@ export default function PersonalInformation() {
                     </div>
 
                     <div className="flex justify-end gap-4.5">
-                        <button
-                            className="flex justify-center rounded border border-stroke py-2 px-6 font-medium text-black hover:shadow-1 dark:border-strokedark dark:text-white"
-                            type="submit"
-                        >
-                            Cancel
-                        </button>
-                        <button
-                            className="flex justify-center rounded bg-primary py-2 px-6 font-medium text-gray hover:bg-opacity-95"
-                            type="submit"
-                        >
-                            Save
-                        </button>
+                        <Button text="Cancel" variants="secondary" className="border border-stroke py-2 px-6 w-full" />
+                        <Button text="Save" className="w-full" />
                     </div>
                 </form>
             </div>
