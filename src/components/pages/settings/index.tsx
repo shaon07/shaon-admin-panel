@@ -11,8 +11,9 @@ export default function SettingsViewLayer() {
                 <div className="col-span-5 xl:col-span-3">
                     <PersonalInformation />
                 </div>
-
-                <PhotoLoader />
+                <div className="col-span-5 xl:col-span-2">
+                    <PhotoLoader />
+                </div>
             </div>
         </div>
     )
