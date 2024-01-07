@@ -1,7 +1,7 @@
 import { checkArray } from "@/helpers";
 import { styles } from "@/styles/tailwind/ProfilePageViewLayer/profileStaticsInfo.css";
 import { profile_dataType } from "@/types";
-import { profile_data } from "./data";
+import { profile_data } from "../../../../resources/profileData";
 
 
 export default function ProfileStaticsInfo() {
