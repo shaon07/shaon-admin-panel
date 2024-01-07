@@ -4,7 +4,7 @@ import { styles } from "@/styles/tailwind/VisitorChart/index.css";
 import { ApexOptions } from "apexcharts";
 import dynamic from "next/dynamic";
 import { VisitorChartState } from '.';
-import { deviceData } from "./data/deviceData";
+import { deviceData } from "../../../resources/visitorChart/deviceData";
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 type VisitorChartViewLayerProps = {
