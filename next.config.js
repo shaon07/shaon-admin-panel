@@ -8,7 +8,8 @@ const nextConfig = {
                 hostname: 'avatars.githubusercontent.com',
             },
         ],
-    }
+    },
+    reactStrictMode: true,
 }
 
 module.exports = nextConfig
