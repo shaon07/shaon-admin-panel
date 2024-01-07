@@ -1,5 +1,5 @@
+import { chatListData } from "../../../resources/chatList";
 import ChatListViewLayer from "./ChatListViewLayer";
-import { chatListData } from "./data";
 
 const ChatList = () => {
     return <ChatListViewLayer chatList={chatListData} />
