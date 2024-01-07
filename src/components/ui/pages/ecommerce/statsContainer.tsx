@@ -1,5 +1,5 @@
-import { ecommerceStatsData, ecommerceStatsDataTypes } from '@/components/pages/ecommerce/data/statsData'
 import { checkArray } from '@/helpers'
+import { ecommerceStatsData, ecommerceStatsDataTypes } from '@/resources/ecommercePageData/statsData'
 import { styles } from '@/styles/tailwind/statsContainer/index.css'
 import CardDataStats from '@/views/common/CardDataStats'
 
