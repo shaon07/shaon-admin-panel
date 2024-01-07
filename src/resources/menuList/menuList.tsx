@@ -1,13 +1,11 @@
 import {
-  AuthIcon,
   CalenderIcon,
   ChartIcon,
   DashboardIcon,
   FormIcon,
   ProfileIcon,
   SettingsIcon,
-  TablesIcon,
-  UIELementsIcon,
+  TablesIcon
 } from "@/custom-icons";
 
 export const menuList = [
@@ -90,48 +88,6 @@ export const menuList = [
         link: "/chart",
         icon: <ChartIcon />,
         children: [],
-      },
-      {
-        title: "UI Elements",
-        value: "ui-elements",
-        link: "/ui-elements",
-        icon: <UIELementsIcon />,
-        children: [
-          {
-            title: "Alerts",
-            value: "alerts",
-            link: "ui/alerts",
-            icon: "",
-            children: [],
-          },
-          {
-            title: "Buttons",
-            value: "buttons",
-            link: "ui/buttons",
-            icon: "",
-            children: [],
-          },
-        ],
-      },
-      {
-        title: "Authentication",
-        value: "authentication",
-        link: "authentication",
-        icon: <AuthIcon />,
-        children: [
-          {
-            title: "Sign In",
-            value: "signin",
-            link: "auth/signin",
-            icon: "",
-          },
-          {
-            title: "Sign Up",
-            value: "signup",
-            link: "auth/signup",
-            icon: "",
-          },
-        ],
       },
     ],
   },
