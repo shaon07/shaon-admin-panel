@@ -43,7 +43,7 @@ export default function ProfitChartViewLayer({ options, series }: ProfitChartVie
                         series={series.series}
                         type="bar"
                         height={350}
-                        width={500}
+                        width="100%"
                     />
                 </div>
             </div>
