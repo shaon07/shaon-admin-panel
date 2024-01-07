@@ -1,7 +1,7 @@
 import { checkArray } from "@/helpers";
+import { socialShareData } from "@/resources/socialShare";
 import { styles } from "@/styles/tailwind/SocialShare/index.css";
 import { socialDataType } from "@/types";
-import { socialShareData } from "./data";
 
 export default function SocialShare() {
     return (
