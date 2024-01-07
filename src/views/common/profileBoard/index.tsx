@@ -1,7 +1,7 @@
-import { profileMenuItems } from '@/components/shareable/DropdownUser/data';
 import { ADMIN_IMAGE, ADMIN_NAME, ADMIN_PASSION } from '@/constant';
 import { LogoutIcon, ProfileDropDown } from '@/custom-icons';
 import { checkArray } from '@/helpers';
+import { profileMenuItems } from '@/resources/dropdownChatList';
 import { styles } from '@/styles/tailwind/profileBoard/index.css';
 import Image from 'next/image';
 import Link from 'next/link';
