@@ -5,7 +5,7 @@ const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 type BarChartViewLayerProps = {
     options: ApexOptions;
-    series: any;
+    series: { data: number[] }[];
 }
 
 export default function BarChartViewLayer({ options, series }: BarChartViewLayerProps) {
@@ -17,13 +17,14 @@ export default function BarChartViewLayer({ options, series }: BarChartViewLayer
                 </h3>
             </div>
 
-            <div className="mb-2 h-[22rem]">
+            <div className="mb-2">
                 <div id="chartFour" className="">
                     <ApexCharts
                         options={options}
                         series={series}
                         type="bar"
                         height={350}
+                        width="100%"
                     />
                 </div>
             </div>
