@@ -1,7 +1,7 @@
 import { checkArray } from "@/helpers";
 import { styles } from "@/styles/tailwind/Calender/index.css";
+import { dayList } from "../../../../resources/calenderData/calender";
 import CalenderHead from "./calenderHead";
-import { dayList } from "./data/calender";
 
 export default function Calender() {
     return (
