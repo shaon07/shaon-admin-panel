@@ -1,6 +1,6 @@
 import { checkArray } from "@/helpers";
 import { styles } from "@/styles/tailwind/sidebarViewLayer/index.css";
-import { menuList } from "../../data/menuList";
+import { menuList } from "../../../../resources/menuList/menuList";
 import MenuListDropDown from "./MenuListDropDown";
 import MenuListItem from "./MenuListItem";
 
