@@ -1,5 +1,5 @@
-import { dateList } from "@/components/pages/calender/data/date";
 import { checkArray } from "@/helpers";
+import { dateList } from "@/resources/calenderPageData/date";
 import { styles } from "@/styles/tailwind/Calender/calenderHead.css";
 import { dateListType } from "@/types";
 
